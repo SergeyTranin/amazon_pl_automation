@@ -1,0 +1,33 @@
+
+-----
+Test: test_buy_product_happy_path.py::test_buy_product (call)
+Start time: 2023-05-09 10:12:32.370972
+Start name method: open_catalog
+
+End time: 2023-05-09 10:12:52.770851
+End name method: open_catalog
+URL: https://www.amazon.pl/s?bbn=20860262031&rh=n%3A20659543031%2Cn%3A20859749031%2Cn%3A20859834031%2Cn%3A20860262031%2Cn%3A20860875031&dc&qid=1683623579&rnid=20860262031&ref=lp_20860262031_nr_n_4
+
+-----
+
+-----
+Test: test_buy_product_happy_path.py::test_buy_product (call)
+Start time: 2023-05-09 10:12:52.770851
+Start name method: apply_filters
+
+End time: 2023-05-09 10:13:00.691610
+End name method: apply_filters
+URL: https://www.amazon.pl/gp/cart/view.html?ref_=nav_top_cart
+
+-----
+
+-----
+Test: test_buy_product_happy_path.py::test_buy_product (call)
+Start time: 2023-05-09 10:13:00.692613
+Start name method: proceed_to_payment
+
+End time: 2023-05-09 10:13:01.805158
+End name method: proceed_to_payment
+URL: https://www.amazon.pl/ap/signin?_encoding=UTF8&openid.assoc_handle=amazon_checkout_pl&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.pl%2Fgp%2Fbuy%2Fsignin%2Fhandlers%2Fcontinue.html%3Fie%3DUTF8%26brandId%3D%26cartItemIds%3D%26eGCApp%3D%26hasWorkingJavascript%3D0%26isEGCOrder%3D0%26isFresh%3D%26oldCustomerId%3D0%26oldPurchaseId%3D%26preInitiateCustomerId%3D%26purchaseInProgress%3D%26ref_%3Dcart_signin_submit%26siteDesign%3D&pageId=amazon_checkout_pl&showRmrMe=0&siteState=isRegularCheckout.1%7CIMBMsgs.%7CisRedirect.1&suppressSignInRadioButtons=0
+
+-----
