@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 import time
 
+from utilities.logger import Logger
+
 
 class CartPage(Base):
     def __init__(self, driver):
@@ -29,6 +31,8 @@ class CartPage(Base):
     """Methods"""
 
     def proceed_to_payment(self):
+        Logger.add_start_step(method='proceed_to_payment')
         self.get_current_url()
         self.click_proceed_to_retail()
         self.get_screenshot()
+        Logger.add_end_step(url=self.driver.current_url, method='proceed_to_payment')

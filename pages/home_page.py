@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 import time
 
+from utilities.logger import Logger
+
 
 class HomePage(Base):
     def __init__(self, driver):
@@ -16,7 +18,7 @@ class HomePage(Base):
     """Locators"""
 
     #accept_cookies = "//input[@id='sp-cc-accept']"
-    reject_coockies = "//a[@id='sp-cc-rejectall-link']"
+    reject_coockies = "//a[text()='Kontynuuj bez akceptacji']"
     logo_button = "//a[@id = 'nav-bb-logo']"
     burger_menu_button = "//span[@class = 'hm-icon-label']"
     sport_menu_item = "//a[@data-menu-id='12']"
@@ -102,19 +104,20 @@ class HomePage(Base):
     """Methods"""
 
     def open_catalog(self):
+        Logger.add_start_step(method='open_catalog')
         self.driver.get(self.url)
         self.driver.maximize_window()
-        time.sleep(1)
         self.get_current_url()
+        time.sleep(10)
         self.click_reject_cookies_button()
-        self.click_logo_button()
+        #self.click_logo_button()
         self.click_burger_menu_button()
         time.sleep(1)
         self.click_sport_menu_item()
         self.click_cycling_category()
         self.assert_text(self.get_cycling_page_banner(), "Kolarstwo")
-        self.click_reject_cookies_button()
         self.click_bicycles_item()
         self.assert_text(self.get_bicycles_page_banner(), "Kolarstwo - Rowery")
         self.click_mountain_bikes()
         self.assert_text(self.get_mtb_page_banner(), "Kolarstwo - Rowery górskie")
+        Logger.add_end_step(url=self.driver.current_url, method='open_catalog')

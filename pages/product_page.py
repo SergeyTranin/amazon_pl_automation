@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 import time
 
+from utilities.logger import Logger
+
 
 class ProductPage(Base):
     def __init__(self, driver):
@@ -87,6 +89,7 @@ class ProductPage(Base):
     """Methods"""
 
     def apply_filters(self):
+        Logger.add_start_step(method='apply_filters')
         self.get_current_url()
         self.click_gear_number()
         self.click_wheel_size()
@@ -98,3 +101,4 @@ class ProductPage(Base):
         self.click_go_to_cart_button()
         self.get_screenshot()
         self.assert_url("https://www.amazon.pl/gp/cart/view.html?ref_=nav_top_cart")
+        Logger.add_end_step(url=self.driver.current_url, method='apply_filters')
